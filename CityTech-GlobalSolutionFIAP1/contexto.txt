@@ -1,0 +1,150 @@
+1. O que é o CityTech?
+O CityTech — Plataforma Inteligente de Monitoramento e Zeladoria Urbana é um sistema voltado à identificação, ao registro e ao acompanhamento de problemas urbanos.
+A proposta é conectar cidadãos e gestores públicos por meio de uma plataforma digital que facilite a comunicação e o acompanhamento das ocorrências.
+Exemplos de problemas que o sistema pode atender incluem buracos nas ruas, postes com iluminação danificada, descarte irregular de lixo e problemas de infraestrutura pública.
+O cidadão poderá registrar uma ocorrência, acompanhar seu andamento e visualizar as informações relacionadas à solução do problema. O gestor poderá organizar as ocorrências, atualizar seus status, consultar indicadores e analisar sugestões de classificação geradas por IA.
+2. Arquitetura do sistema
+Frontend — Aplicativo React Native
+Telas, navegação, cadastro, login e gerenciamento de ocorrências
+Backend .NET
+Contas, autenticação JWT, acompanhamentos e SQL Server
+Backend Java
+Ocorrências, categorias, gestão, Oracle, IA e RabbitMQ
+É importante que o integrante compreenda que Java Advanced e .NET são disciplinas diferentes, embora ambas façam parte do mesmo CityTech.
+Para a disciplina Mobile, a FIAP exige um CRUD real consumindo a API Java ou .NET. Nossa arquitetura prevê a utilização dos dois serviços conforme as funcionalidades, mas o aplicativo não precisa duplicar responsabilidades.
+3. Funcionalidades do frontend
+O aplicativo deve permitir que o usuário se cadastre, faça login, consulte ocorrências urbanas, registre problemas e acompanhe suas solicitações.
+Uma estrutura de telas adequada ao projeto seria:
+Tela
+	
+Função
+
+
+Boas-vindas
+	
+Apresentação do CityTech
+
+
+Login
+	
+Autenticação real
+
+
+Cadastro
+	
+Registro de cidadão
+
+
+Início
+	
+Resumo e navegação principal
+
+
+Ocorrências
+	
+Listagem, filtros e consulta
+
+
+Nova ocorrência
+	
+Registro de problema urbano
+
+
+Detalhes
+	
+Status e histórico da ocorrência
+
+
+Acompanhamentos
+	
+Gerenciamento dos registros do cidadão
+
+
+Gestão
+	
+Triagem e indicadores para gestores
+
+
+Sobre o App
+	
+Versão e hash do commit publicado
+Essa é uma organização sugerida, não uma obrigação de implementar todas as telas.
+A FIAP exige no mínimo seis telas distintas, e a tela Sobre o App não conta nesse total.
+4. Identidade visual
+O CityTech deve transmitir a ideia de tecnologia, confiança, organização e utilidade pública.
+Minha sugestão para o integrante é desenvolver uma interface moderna e profissional, com hierarquia visual clara, tipografia legível, navegação simples e componentes reutilizáveis.
+O foco deve estar na facilidade de registrar uma ocorrência e entender seu andamento, sem transformar o aplicativo em algo excessivamente complexo.
+A identidade visual ainda pode ser definida pelo integrante do frontend, desde que seja consistente em todas as telas.
+5. O que já desenvolvemos?
+Componente
+	
+Estado atual
+
+
+Backend .NET
+	
+Implementado; 76 testes aprovados segundo o OpenCode
+
+
+Backend Java
+	
+Implementado; 40 testes aprovados segundo o OpenCode
+
+
+RabbitMQ
+	
+Integração real testada
+
+
+Autenticação JWT
+	
+Implementada
+
+
+Spring AI
+	
+Código implementado; falta validação com modelo real
+
+
+Oracle institucional
+	
+Falta configurar e validar
+
+
+Integração completa Java/.NET
+	
+Ainda não comprovada
+
+
+Frontend
+	
+Responsabilidade do outro integrante
+O integrante pode começar a desenvolver a interface agora. Porém, para conectar as telas corretamente, ele precisará dos contratos reais das APIs.
+Os arquivos mais importantes para compartilhar com ele são docs/contratos-api.md, docs/integracao-mobile.md, docs/modelo-dominio.md e os READMEs dos dois backends.
+6. Requisitos obrigatórios da disciplina Mobile
+Conferi a seção de Mobile no PDF oficial da Global Solution 2026/2. A pontuação está distribuída assim:
+CRUD integrado à API
+30 pts
+ 
+Arquitetura e organização
+20 pts
+ 
+Autenticação
+20 pts
+ 
+Telas e navegação
+10 pts
+ 
+Vídeo de demonstração
+10 pts
+ 
+Identidade visual
+5 pts
+ 
+Publicação
+5 pts
+ 
+Além das funcionalidades, o aplicativo deverá ser publicado no Firebase App Distribution, com o professor cadastrado como testador. Também será necessário gravar um vídeo de demonstração de até cinco minutos e manter um histórico Git coerente.
+O backend precisa estar acessível durante a avaliação para que o CRUD do aplicativo possa ser testado.
+O PDF que gerei já está organizado como um documento de passagem de projeto, com todos esses pontos explicados em mais detalhes, incluindo as regras de integração, os fluxos de usuário, as pendências e um checklist de entrega.
+Minha recomendação é enviar esse PDF ao integrante junto com o repositório do CityTech. Assim, ele terá uma visão completa do sistema e poderá começar o frontend sem precisar reinventar a arquitetura que já desenvolvemos.
